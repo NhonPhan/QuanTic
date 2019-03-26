@@ -17,7 +17,10 @@ III. Test API (Using Postman)
     }
     Result:
     {
-        1
+        "type": "order",
+        "order": {
+            "id": 1
+        }
     }
 2. cancel an order
     PUT: http://localhost:8080/api/orders
@@ -27,13 +30,17 @@ III. Test API (Using Postman)
     }
     Result:
     {
-        [
-            1
-        ]
+    "type": "order",
+    "order": {
+        "id": 1
     }
+}
 
 3. check orders status
     GET: http://localhost:8080/api/order/1
     NOTES: have to signin before testing this API
     Result:
-        "CREATED"
+    {
+        "type": "order_status",
+        "order_status": "CANCELLED"
+    }

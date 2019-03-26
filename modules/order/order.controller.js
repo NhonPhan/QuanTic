@@ -24,8 +24,14 @@ class OrderController {
       handler
         .createOrder(command)
         .then(orderID => {
-          logger.info("CREATE-ORDER", "Finished!");
-          return res.status(httpCodes.OK).json(orderID);
+          logger.info("CREATE-ORDER", "Finished!", orderID);
+          let dataRes = {
+            type: "order",
+            order: {
+              id: orderID
+            }
+          };
+          return res.status(httpCodes.OK).json(dataRes);
         })
         .catch(err => {
           logger.error(err.message);
@@ -56,7 +62,13 @@ class OrderController {
         .cancelOrder(id, command)
         .then(result => {
           logger.info("CANCEL-ORDER", "Finished!");
-          return res.status(httpCodes.OK).json(result);
+          let dataRes = {
+            type: "order",
+            order: {
+              id: id
+            }
+          };
+          return res.status(httpCodes.OK).json(dataRes);
         })
         .catch(err => {
           logger.error(err.message);
@@ -84,15 +96,22 @@ class OrderController {
       service
         .getCheckStatusOrder(id)
         .then(result => {
+          let dataRes = {
+            type: "order_status"
+          };
           switch (result.state_id) {
             case 1:
-              return res.status(httpCodes.OK).json("CREATED");
+              dataRes.order_status = "CREATED";
+              return res.status(httpCodes.OK).json(dataRes);
             case 2:
-              return res.status(httpCodes.OK).json("COMFIRMED");
+              dataRes.order_status = "COMFIRMED";
+              return res.status(httpCodes.OK).json(dataRes);
             case 3:
-              return res.status(httpCodes.OK).json("DELIVERED");
+              dataRes.order_status = "DELIVERED";
+              return res.status(httpCodes.OK).json(dataRes);
             default:
-              return res.status(httpCodes.OK).json("CANCELLED");
+              dataRes.order_status = "CANCELLED";
+              return res.status(httpCodes.OK).json(dataRes);
           }
         })
         .catch(err => {

@@ -1,5 +1,5 @@
 {
-  "name": "backend Assignment",
+  "name": "backend_assignment",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
@@ -10,7 +10,6 @@
     "url": "https://github.com/NhonPhan/Quantic"
   },
   "keywords": [
-    "argent",
     "backend",
     "nodejs",
     "expressjs",
