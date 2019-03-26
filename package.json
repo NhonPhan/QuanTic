@@ -1,0 +1,58 @@
+{
+  "name": "node_cqrs",
+  "version": "1.0.0",
+  "description": "this is a sample project node and cqrs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://trungmb007@bitbucket.org/argent_team/argent_backend.git"
+  },
+  "keywords": [
+    "argent",
+    "backend",
+    "nodejs",
+    "expressjs",
+    "sequenlizejs"
+  ],
+  "author": "NhonPhan",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/argent_team/argent_backend#readme",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "csvtojson": "^2.0.3",
+    "express": "^4.16.3",
+    "express-fileupload": "^0.4.0",
+    "fluentreports": "^1.1.8",
+    "fs-extra": "^6.0.1",
+    "gulp": "^4.0.0",
+    "gulp-mysql-command-file-processor": "^1.0.5",
+    "gulp-stream-to-promise": "^0.1.0",
+    "helmet": "^3.12.0",
+    "http-status-codes": "^1.3.0",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.2.1",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "mysql2": "^1.5.3",
+    "node-schedule": "^1.3.0",
+    "node-uuid": "^1.4.8",
+    "nodemailer": "^4.6.5",
+    "nodemailer-mailgun-transport": "^1.3.6",
+    "nodemon": "^1.17.3",
+    "promise-fs": "^1.3.0",
+    "redis": "^2.8.0",
+    "sequelize": "^4.37.6",
+    "useragent": "^2.3.0",
+    "validator": "^10.3.0",
+    "winston": "^2.4.1"
+  }
+}
