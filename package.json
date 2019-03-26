@@ -1,14 +1,13 @@
 {
-  "name": "node_cqrs",
+  "name": "backend Assignment",
   "version": "1.0.0",
-  "description": "this is a sample project node and cqrs",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://trungmb007@bitbucket.org/argent_team/argent_backend.git"
+    "url": "https://github.com/NhonPhan/Quantic"
   },
   "keywords": [
     "argent",
@@ -19,7 +18,7 @@
   ],
   "author": "NhonPhan",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/argent_team/argent_backend#readme",
+  "homepage": "https://github.com/NhonPhan/Quantic",
   "dependencies": {
     "amqplib": "^0.5.2",
     "bcrypt-nodejs": "0.0.3",
